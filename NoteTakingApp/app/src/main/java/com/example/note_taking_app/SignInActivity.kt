@@ -38,7 +38,8 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
-
+    }}
+/*
         signInButton = findViewById(R.id.signInButton)
         //following official doc...
 
@@ -59,7 +60,7 @@ class SignInActivity : AppCompatActivity() {
     }//end onCreate
 
 
-    //now...
+    //now when app start automaticaly log in if ser already exists
     override fun onStart(){
         super.onStart()
         val currentUser = auth.currentUser
@@ -152,6 +153,8 @@ class SignInActivity : AppCompatActivity() {
 
 }
 
+
+ */
 
 
 

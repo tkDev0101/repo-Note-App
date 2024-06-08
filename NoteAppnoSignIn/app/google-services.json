@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:530933501683:android:ba5b4ab8f86a61a93e3186",
+        "android_client_info": {
+          "package_name": "com.example.note_app_no_signin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530933501683-borecgkfdq2e74asvirp3l0ohok9otkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATQIcIIPFiKSYa8XluSMpNhwAjj9catOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530933501683-borecgkfdq2e74asvirp3l0ohok9otkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:530933501683:android:a53d6586823bc5a13e3186",
         "android_client_info": {
           "package_name": "com.example.note_taking_app"
