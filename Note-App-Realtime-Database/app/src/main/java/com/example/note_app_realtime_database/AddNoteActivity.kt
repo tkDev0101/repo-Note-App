@@ -1,17 +1,11 @@
-package com.example.note_app_no_signin
+package com.example.note_app_realtime_database
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class AddNoteActivity : AppCompatActivity() {
 
-
-    //Variables
+    // Variables
     private lateinit var noteEditText: EditText
     private lateinit var addNoteButton: Button
     private lateinit var noteDao: NoteDao
@@ -20,27 +14,20 @@ class AddNoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_note)
 
-        //TYPECASTING
+        // TYPECASTING
         addNoteButton = findViewById(R.id.addNoteButton)
         noteEditText = findViewById(R.id.noteEditText)
         noteDao = NoteDao()
 
-
-        //Event Handler -> onClickListener
-        addNoteButton.setOnClickListener{
-
+        // Event Handler -> onClickListener
+        addNoteButton.setOnClickListener {
             val note = noteEditText.text.toString()
-
-            if(note.isNotEmpty()){
-                //navigate to Main Activity
-                    //now create note data class and note-data to add data to firestore
-                        //now create layout for recyclerview
-                            //now create adaptor for recyclerView
+            if(note.isNotEmpty()) {
+                // Navigate to Main Activity
                 noteDao.addNote(note)
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
         }
-
     }
 }

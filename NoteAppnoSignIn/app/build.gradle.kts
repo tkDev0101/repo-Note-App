@@ -63,12 +63,12 @@ dependencies {
         // FirebaseUI for Cloud Storage
         implementation ("com.firebaseui:firebase-ui-storage:8.0.0")
 
-    //error building
+        //error building
        // implementation ("com.firebaseui:firebase-ui-storage:8.0.0")
        // implementation ("com.firebaseui:firebase-ui-database:8.0.0")
 
 
-    // for kotlin coroutines
+        // for kotlin coroutines
         implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
         implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1")
 
@@ -82,8 +82,8 @@ dependencies {
 
         // Also declare the dependency for the Google Play services library and specify its version
         implementation ("com.google.android.gms:play-services-auth:20.0.1")
-    implementation("com.google.firebase:firebase-database:21.0.0")
-    implementation("com.google.firebase:firebase-storage:21.0.0")
+        implementation("com.google.firebase:firebase-database:21.0.0")
+        implementation("com.google.firebase:firebase-storage:21.0.0")
 
     //*/
 
