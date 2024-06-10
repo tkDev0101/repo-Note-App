@@ -1,7 +1,10 @@
 package com.example.note_app_realtime_database
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 
 class AddNoteActivity : AppCompatActivity() {
 

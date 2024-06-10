@@ -1,10 +1,19 @@
 package com.example.note_app_realtime_database
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+
+import com.firebase.ui.database.FirebaseRecyclerOptions
 
 class MainActivity : AppCompatActivity() {
-
 
     // Variables
     private lateinit var recyclerView: RecyclerView
@@ -12,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var backFAB: FloatingActionButton
     private lateinit var databaseReference: DatabaseReference
     private lateinit var auth: FirebaseAuth
-    private lateinit var adapter: RVAdapter
+    private lateinit var adaptor: RVAdaptor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpRecyclerView() {
+
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Get currentUserId using auth
@@ -58,8 +68,8 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         // Now add adapter
-        adapter = RVAdapter(recyclerViewOptions)
-        recyclerView.adapter = adapter
+        adaptor = RVAdaptor(recyclerViewOptions)
+        recyclerView.adapter = adaptor
 
         // Create itemTouchHelper to swipe to delete note
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT){
@@ -73,18 +83,18 @@ class MainActivity : AppCompatActivity() {
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.absoluteAdapterPosition
-                adapter.deleteNote(position)
+                adaptor.deleteNote(position)
             }
         }).attachToRecyclerView(recyclerView)
     }
 
     override fun onStart() {
         super.onStart()
-        adapter.startListening()
+        adaptor.startListening()
     }
 
     override fun onStop() {
         super.onStop()
-        adapter.stopListening()
+        adaptor.stopListening()
     }
 }

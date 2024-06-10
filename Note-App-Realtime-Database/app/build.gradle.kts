@@ -52,6 +52,36 @@ dependencies {
     implementation("com.google.firebase:firebase-storage:21.0.0")
 
 
+    // FirebaseUI for Realtime Database
+    implementation("com.firebaseui:firebase-ui-database:8.0.0")
+
+    // FirebaseUI for Firebase Auth
+    implementation("com.firebaseui:firebase-ui-auth:8.0.0")
+
+    // FirebaseUI for Cloud Storage
+    implementation("com.firebaseui:firebase-ui-storage:8.0.0")
+
+    // For Firebase Authentication and user
+    // Firebase BoM (Bill of Materials)
+    implementation("com.google.firebase:firebase-bom:29.0.4")
+
+    // Firebase Authentication library
+    implementation("com.google.firebase:firebase-auth-ktx")
+
+    // Firebase Realtime Database
+    implementation("com.google.firebase:firebase-database:21.0.0")
+
+    // Firebase Cloud Storage
+    implementation("com.google.firebase:firebase-storage:21.0.0")
+
+
+    // Declare the dependency for the Google Play services library and specify its version
+    implementation("com.google.android.gms:play-services-auth:20.0.1")
+
+
+    // For Kotlin coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1")
 
 
 

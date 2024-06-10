@@ -1,4 +1,6 @@
 package com.example.note_app_realtime_database
 
-class Note {
-}
+data class Note (
+        val text: String = "",
+        val uid: String =""
+    )
