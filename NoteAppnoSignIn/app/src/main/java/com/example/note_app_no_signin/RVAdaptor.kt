@@ -13,13 +13,19 @@ class RVAdaptor(options: FirestoreRecyclerOptions<Note>) : FirestoreRecyclerAdap
     options
 
 ){
-    //now set up the rcyclerView in mainActivity
+    //now set up the recyclerView in mainActivity
 
     class RVViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView) {
 
         val noteText: TextView = itemView.findViewById(R.id.noteText)
 
     }
+
+    //delete a note
+    fun deleteNote(position: Int){
+        snapshots.getSnapshot(position).reference.delete()
+    }
+
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RVViewHolder {
 
             return RVViewHolder (LayoutInflater.from(parent.context).inflate(R.layout.item_rv,parent, false))

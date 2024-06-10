@@ -15,9 +15,9 @@ class NoteDao {
     //private val auth = FirebaseAuth.getInstance()
     //auth = Firebase.auth
     fun addNote(text: String){
-        /*val currentUserId = auth.currentUser!!.uid
-        val note = Note(text, currentUserId)*/
-        val note = Note(text)
+        val currentUserId = auth.currentUser!!.uid
+        val note = Note(text, currentUserId)
+        //val note = Note(text)
         noteCollection.document().set(note)
     }
 
